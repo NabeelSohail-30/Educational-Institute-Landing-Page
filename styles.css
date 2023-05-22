@@ -231,28 +231,30 @@ nav a:hover {
 /*------------------Contact-----------------*/
 
 .contact {
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
-    width: 100%;
+    justify-content: center;
+    width: 90%;
 }
 
 .col {
-    flex-basis: 50%;
+    flex-basis: 40%;
     padding: 0 10px;
 }
 
 .map {
-    height: 450px;
     background-color: #ddd;
     border-radius: 5px;
-    overflow: hidden;
-    width: fit-content;
+    margin: 10px auto;
+    width: 600px;
 }
 
 .contact-form {
@@ -266,6 +268,7 @@ nav a:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 10px auto;
 }
 
 .contact-form form input,
@@ -309,20 +312,14 @@ h2 {
 /*----------------------Services - Cards-----------------*/
 
 .courses {
-    width: 70%;
+    width: 80%;
 }
 
-.category-name {
-    font-family: sans-serif;
-    width: -webkit-fill-available;
-    text-align: center;
-    font-size: 40px;
-}
-
-.card-category {
+.cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     margin-bottom: 10px;
@@ -332,17 +329,21 @@ h2 {
 
 /* Basic Card */
 .basic-card {
-    width: 300px;
+    flex-basis: 22%;
+    color: var(--white);
     position: relative;
-
+    margin: 10px auto;
+    justify-self: center;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
     -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to bottom right, var(--primary), #99a3d4);
 }
 
 .basic-card .card-content {
     padding: 30px;
+    color: var(white);
 }
 
 .basic-card .card-title {
@@ -357,12 +358,14 @@ h2 {
 .basic-card .card-link {
     padding: 25px;
     width: -webkit-fill-available;
+    border-top: 1px solid var(--white);
 }
 
 .basic-card .card-link a {
     text-decoration: none;
     position: relative;
     padding: 10px 0px;
+    color: var(--white);
 }
 
 .basic-card .card-link a:after {
@@ -373,7 +376,7 @@ h2 {
     left: 50%;
     position: absolute;
     width: 0;
-
+    background: var(--white);
     -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
     -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -383,24 +386,6 @@ h2 {
 .basic-card .card-link a:hover:after {
     width: 100%;
     left: 0;
-}
-
-
-.basic-card-aqua {
-    background-image: linear-gradient(to bottom right, var(--primary), #99a3d4);
-}
-
-.basic-card-aqua .card-content,
-.basic-card .card-link a {
-    color: var(--white);
-}
-
-.basic-card-aqua .card-link {
-    border-top: 1px solid var(--white);
-}
-
-.basic-card-aqua .card-link a:after {
-    background: var(--white);
 }
 
 /*------------------Footer-----------------*/
@@ -471,3 +456,71 @@ hr {
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
+
+
+/* Media Queries */
+@media only screen and (max-width: 1470px) {
+    .container-head {
+        width: 90%;
+    }
+
+    .about {
+        width: 70%;
+    }
+
+    .courses {
+        width: 90%;
+    }
+
+    .basic-card {
+        flex-basis: 24%;
+    }
+
+    .contact {
+        width: 90%;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .map {
+        width: fit-content;
+    }
+
+    .contact .col {
+        flex-basis: 40%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container-head {
+        width: 92%;
+    }
+
+    .container-head .heading {
+        font-size: 40px;
+    }
+
+    .basic-card {
+        flex-basis: 26%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container-head {
+        width: 92%;
+    }
+
+    .container-head .heading {
+        font-size: 40px;
+    }
+
+    .basic-card {
+        flex-basis: 26%;
+    }
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 576px) {}
